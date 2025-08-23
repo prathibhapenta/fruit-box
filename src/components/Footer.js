@@ -9,7 +9,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
 
-        {/* About Section */}
+       
         <div className="footer-section about">
           <h2>🍏 FruitBox</h2>
           <p>
@@ -17,12 +17,11 @@ const Footer = () => {
             Stay healthy and enjoy nature’s sweetness every day with FruitBox!
           </p>
 
-          {/* ✅ Social Media Icons */}
           <div className="social-icons">
-            <a href="https://www.instagram.com/instagram/" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/aarogya_kadapa?igsh=NWlqZWlpajJlY2Fl" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </a>
-            <a href="https://www.youtube.com/@YouTube" target="_blank" rel="noopener noreferrer">
+            <a href="https://youtube.com/@aarogyakadapa?si=xe7rGbmBKu-u3lYe" target="_blank" rel="noopener noreferrer">
               <FaYoutube />
             </a>
             <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer">
@@ -34,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Quick Links */}
+        
         <div className="footer-section links">
           <h3>Quick Links</h3>
           <ul>
