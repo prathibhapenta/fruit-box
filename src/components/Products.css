@@ -1,0 +1,206 @@
+.product-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 30px;
+  background: transparent; 
+  text-align: center;
+}
+
+.product-container h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 25px;
+}
+
+.product-img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2);
+}
+.product-container p {
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 1.6;
+  color: black;
+  margin: 15px 0;
+}
+
+.product-container h3 {
+  font-size: 40px;
+  color: #ff6600;
+  margin: 20px 0;
+  font-weight: 700;
+}
+
+.product-container h4 {
+  margin-top: 30px;
+  font-size: 22px;
+  color: #333;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.fruits-list {
+  display: flex;
+  flex-direction: column; 
+  gap: 18px;
+  margin-top: 25px;
+}
+
+.fruit-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
+}
+.fruit-img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 15px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+.fruit-name {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 600;
+  color: #222;
+  text-align: center;
+}
+
+.quantity-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background: #28a745; 
+  padding: 8px 16px;
+  border-radius: 10px;
+  min-width: 120px;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.2);
+}
+
+.quantity-box button {
+  background: transparent;
+  border: none;            
+  color: #ffffff;         
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.quantity-box button:hover {
+  color: #ddd;  
+  transform: scale(1.2);
+}
+
+.quantity-box span {
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  min-width: 25px;
+  text-align: center;
+}
+.social-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.social-section h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  color: white;
+  justify-content: center;
+}
+
+.icon-card {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 100px; 
+  transition: transform 0.2s ease;
+}
+
+.icon-card:hover {
+  transform: scale(1.1);
+}
+
+.icon-card.instagram { background-color: #e1306c; }
+.icon-card.youtube { background-color: #ff0000; }
+.icon-card.whatsapp { background-color: #25d366; }
+.icon-card.call { background-color: #34b7f1; }
+
+@media (max-width: 480px) {
+  .product-container {
+    padding: 15px;
+  }
+
+  .product-container h1 {
+    font-size: 24px;
+  }
+
+  .product-img {
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .fruit-card {
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .fruit-img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .fruit-name {
+    font-size: 16px;
+    margin: 0 10px;
+  }
+
+  .quantity-box {
+    min-width: 90px;
+    padding: 6px 12px;
+    gap: 8px;
+  }
+
+  .quantity-box button {
+    font-size: 18px;
+  }
+
+  .quantity-box span {
+    font-size: 16px;
+  }
+
+  .icon-card {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .social-section h3 {
+    font-size: 18px;
+  }
+}

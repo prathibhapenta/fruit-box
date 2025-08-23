@@ -1,0 +1,46 @@
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { FaShoppingCart } from "react-icons/fa"; 
+import logoImg from '../assets/logoimg.png';
+import './Navbar.css'
+
+const Navbar = ({ cartCount }) => {   
+  const [menuOpen, setMenuOpen] = useState(false)
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
+  return (
+    <nav className="nav-container">
+      <div className="site-name">
+        <img src={logoImg} alt="logo" className="logoimg" />
+        <h1>Fruit Box</h1>
+      </div>
+
+      <div className='menu' onClick={toggleMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div className="nav-links">
+        <ul className={`list-items ${menuOpen ? 'show' : ''}`}>
+          <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+          <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
+          <li><Link to="/products/mini" onClick={() => setMenuOpen(false)}>Products</Link></li>
+          <li><Link to="/plans" onClick={() => setMenuOpen(false)}>Plans</Link></li>
+          <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link></li>
+          <li className="cart-icon">
+            <Link to="/cart" onClick={() => setMenuOpen(false)}>
+              <FaShoppingCart size={22} />
+              {cartCount > 0 && <span className="cart-count">{cartCount}</span>}
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  )
+}
+
+export default Navbar
