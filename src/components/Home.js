@@ -39,7 +39,6 @@ const Home = () => {
       </p>
 
       <div className='our-services'>
-        {/* Mini Box */}
         <div className='service-card'>
           <Link to="/products/mini">
             <img src={miniBoxImg} alt="Mini Box" className='image' />
@@ -49,8 +48,6 @@ const Home = () => {
             <button>Order Now</button>
           </Link>
         </div>
-
-        {/* Full Box */}
         <div className='service-card'>
           <Link to="/products/full">
             <img src={fullBoxImg} alt="Full Box" />

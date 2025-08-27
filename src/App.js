@@ -6,13 +6,13 @@ import About from "./components/About";
 import Footer from "./components/Footer";
 import Plans from "./components/Plans";
 import Products from "./components/Products";
+import ScrollToTop from "./components/ScrollToTop"; 
 import "./App.css";
-
-
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />   
       <div className="app-container">
         <Navbar />
         <div className="content-wrap">

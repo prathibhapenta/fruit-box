@@ -1,202 +1,181 @@
 .home-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
+  padding-top: 0px; 
 }
 
 .carousel,
 .carousel-inner,
 .carousel-item {
-  width: 100%;
-  height: calc(100vh);
-  /* Full screen minus header */
+  height: auto;
 }
 
 .carousel img {
   width: 100%;
-  height: calc(100vh);
+  height: 500px; 
   object-fit: cover;
-  object-position: center top;
-  /* Center horizontally, align top vertically */
+  object-position: center;
 }
-
-/* Mobile & Tablet adjustments */
-@media (max-width: 1024px) {
-  .carousel,
-  .carousel-inner,
-  .carousel-item {
-    height: auto; /* Let height adjust naturally */
-  }
-
-  .carousel {
-    padding-top: 55px; /* Add padding so carousel doesn't go under header */
-  }
-
-  .carousel img {
-    width: 100%;
-    height: auto;
-    object-fit: contain; /* Show full image on smaller screens */
-    object-position: center; /* Centered for smaller screens */
-  }
-}
-
 
 .text-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   margin: 40px auto;
-  max-width: 900px;
   padding: 20px;
+  text-align: center;
 }
 
 .text-content h1 {
-  font-size: 48px;
-  margin: 15px 0;
-  color: black;
-  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.3;
 }
 
 .text-content p {
-  font-size: 20px;
-  font-weight: 500;
-  color: black;
-  margin: 15px 0 30px;
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 0 20px;
 }
 
 .logo-wrapper {
-  width: 180px;
-  height: 180px;
-  background: white;
-  border-radius: 50%;
+  width: 160px;
+  height: 160px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  margin-bottom: 20px;
 }
 
 .logo {
-  width: 120px;
-  height: auto;
+  width: 120px; 
+  height: auto; 
   border-radius: 50%;
 }
 
 .our-services {
   display: flex;
   justify-content: center;
-  align-items: stretch;
-  gap: 20px;
-  width: 100%;
-  margin: 40px 0;
-  padding: 0 20px;
   flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0;
 }
 
 .service-card {
+  width: 300px;
+  padding: 20px;
   border-radius: 12px;
-  padding: 15px;
-  width: 48%;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card img {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
 }
 
-.service-card img:hover {
-  transform: scale(1.05);
-}
-
-.service-card p {
-  color: red;
-  font-weight: bold;
-  font-size: 30px;
+.service-card p.price {
+  font-size: 26px;
+  margin: 15px 0;
 }
 
 .service-card button {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px 15px;
+  padding: 10px 16px;
+  font-size: 16px;
   border-radius: 6px;
+  border: none;
+  background: green;
+  color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.service-card button:hover {
-  background-color: #218838;
-  transform: scale(1.05);
 }
 
 .services {
-  list-style: none;
-  padding: 0;
-  margin: 40px auto;
-  max-width: 700px;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+   list-style: none;
+   padding: 0; 
+   margin: 40px auto; 
+   max-width: 700px; 
+   display: flex; 
+   flex-direction: column;
+   gap: 15px; 
+} 
 
-.services li {
-  background: #f7f7f7;
+.services li { 
+  background: #f7f7f7; 
   border-radius: 10px;
   padding: 12px 18px;
   font-size: 20px;
   font-weight: 500;
   color: #333;
   display: flex;
-  align-items: center;
-  gap: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+  align-items: center; 
+  gap: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  transition: transform 0.2s ease, box-shadow 0.2s ease; 
+} 
 
-.services li:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-}
-
-.price {
-  color: red;
-  font-size: 30px;
-  font-weight: bold;
+.services li:hover { 
+  transform: translateY(-3px); 
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15); 
 }
 
 @media (max-width: 480px) {
   .carousel img {
-    width: 100%;
-    max-width: 100%;
-    object-fit: cover;
+    height: 250px; 
+  }
+
+  .text-content {
+    margin: 20px auto;
+    padding: 10px;
+  }
+
+  .text-content h1 {
+    font-size: 22px;
+  }
+
+  .text-content p {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  .logo-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .logo {
+    width: 80px;
   }
 
   .our-services {
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 15px;
+    margin: 20px 0;
   }
 
   .service-card {
-    width: 100%;
-    max-width: 350px;
+    width: 90%;
+    max-width: 320px;
+    padding: 12px;
   }
 
-  .service-card img {
-    width: 100%;
-    height: auto;
+  .service-card p.price {
+    font-size: 22px;
+  }
+
+  .service-card button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .services {
+    max-width: 90%;
+    gap: 10px;
+  }
+
+  .services li {
+    font-size: 14px;
+    padding: 10px 12px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .carousel img {
+    height: 350px;
   }
 
   .text-content h1 {
@@ -204,43 +183,54 @@
   }
 
   .text-content p {
-    font-size: 14px;
-  }
-
-  .service-card p {
-    font-size: 24px;
-  }
-
-  .service-card button {
-    padding: 8px 12px;
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  .carousel img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-  }
-
-  .text-content h1 {
-    font-size: 24px;
-  }
-
-  .text-content p {
     font-size: 16px;
-    padding: 0 15px;
-  }
-
-  .our-services {
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
   }
 
   .service-card {
-    width: 100%;
-    max-width: 350px;
+    width: 45%;
+  }
+
+  .services li {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1023px) {
+  .carousel img {
+    height: 450px;
+  }
+
+  .text-content h1 {
+    font-size: 32px;
+  }
+
+  .service-card {
+    width: 280px;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .carousel img {
+    height: 650px; 
+  }
+}
+@media (min-width: 1441px) {
+  .carousel img {
+    height: 750px;
+  }
+
+  .text-content h1 {
+    font-size: 42px;
+  }
+
+  .text-content p {
+    font-size: 20px;
+  }
+
+  .service-card {
+    width: 340px;
+  }
+
+  .services li {
+    font-size: 22px;
   }
 }

@@ -58,10 +58,9 @@
   line-height: 1.4; 
 } 
 
-/* Note for holiday */
 .plan-note { 
   font-size: 14px; 
-  color: #e74c3c; /* red for attention */ 
+  color: #e74c3c;  
   font-weight: bold; 
   margin-top: 5px; 
 } 

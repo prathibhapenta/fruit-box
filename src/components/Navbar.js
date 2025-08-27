@@ -13,7 +13,7 @@ const Navbar = ({ cartCount }) => {
   return (
     <nav className="nav-container">
       <div className="nav-inner">
-        {/* Logo + Brand */}
+        
         <div className="site-name">
           <Link to="/" onClick={() => setMenuOpen(false)} className="logo-link">
             <img src={logoImg} alt="logo" />
@@ -21,14 +21,13 @@ const Navbar = ({ cartCount }) => {
           <h1>Fruit Box</h1>
         </div>
 
-        {/* Hamburger Menu */}
         <div className="menu" onClick={toggleMenu}>
           <span></span>
           <span></span>
           <span></span>
         </div>
 
-        {/* Navigation Links */}
+        
         <div className={`nav-links ${menuOpen ? 'open' : ''}`}>
           <ul className="list-items">
             <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
