@@ -2,7 +2,7 @@ import React from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import { Link } from 'react-router-dom'
 import logoImg from '../assets/logoimg.png';
-import carousel1 from "../assets/carousel1.jpg";
+import carousel11 from "../assets/carousel11.jpg";
 import carousel from "../assets/carousel.jpg";
 import carousel8 from "../assets/carousel8.jpg";
 
@@ -16,7 +16,7 @@ const Home = () => {
     <div className='home-container'>
       <Carousel data-bs-theme="dark">
         <Carousel.Item>
-          <img src={carousel1}  alt="slide" />
+          <img src={carousel11}  alt="slide" />
 
         </Carousel.Item>
         <Carousel.Item>

@@ -139,6 +139,18 @@
     width: 60px; 
     height: 60px; 
   } 
+   .product-actions {
+    margin-top: 5px; 
+    padding-top: 0;  
+  }
+
+  .order-btn,
+  .call-btn {
+    font-size: 14px;
+    margin: 0 5px;   
+    padding: 6px 12px; 
+  }
+
 }
 
 @media (max-width: 768px) {

@@ -1,6 +1,6 @@
-
-import React from "react";
+import React from "react"; 
 import { Link } from "react-router-dom";
+import { FaPhone } from "react-icons/fa";
 import productDetails from "../data/ProductsData";
 import miniBoxImg from "../assets/minibox.jpg";
 import fullBoxImg from "../assets/fullbox.jpg";
@@ -44,7 +44,9 @@ const Plans = () => {
               <div className="plan-details">
                 <h2>{plan.name}</h2>
                 <img src={plan.img} alt={plan.name} className="plan-image" />
-                <h5 className="plan-note">Note: <span>Sunday is Holiday</span></h5>
+                <h5 className="plan-note">
+                  Note: <span>Sunday is Holiday</span>
+                </h5>
                 <p className="plan-price">₹{plan.price}</p>
               </div>
 
@@ -55,13 +57,19 @@ const Plans = () => {
                     <img src={fruit.img} alt={fruit.name} />
                     <span>{fruit.name}</span>
                   </div>
-                  
                 ))}
                 <p>{plan.description}</p>
+
+                <div className="product-actions">
+                  <a href="tel:+919581452787" className="order-btn">
+                    Place Order
+                  </a>
+                  <a href="tel:+919581452787" className="call-btn">
+                    <FaPhone /> Call Now
+                  </a>
+                </div>
               </div>
-              
             </div>
-            
           );
         })}
       </div>
@@ -69,4 +77,4 @@ const Plans = () => {
   );
 };
 
-export default Plans;  
+export default Plans;
