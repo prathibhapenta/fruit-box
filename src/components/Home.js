@@ -8,8 +8,7 @@ import carousel8 from "../assets/carousel8.jpg";
 
 import miniBoxImg from "../assets/minibox.jpg";
 import fullBoxImg from "../assets/fullbox.jpg";
-import comboBoxImg from "../assets/combobox.jpg";
-import monthlyBoxImg from "../assets/monthly.jpg";
+
 import './Home.css'
 
 const Home = () => {
@@ -36,7 +35,7 @@ const Home = () => {
         <div className='our-services'>
           <div className='service-card'>
             <Link to="/products/mini">
-              <img src={miniBoxImg} alt="Mini Box" />
+              <img src={miniBoxImg} alt="Mini Box" className='image' />
             </Link>
             <p className='price'>₹60</p>
             <Link to="/products/mini">
@@ -53,26 +52,7 @@ const Home = () => {
               <button>Order Now</button>
             </Link>
           </div>
-
-          <div className='service-card'>
-            <Link to="/products/combo">
-              <img src={comboBoxImg} alt="Combo Box" />
-            </Link>
-            <p className='price'>₹100</p>
-            <Link to="/products/combo">
-              <button>Order Now</button>
-            </Link>
-          </div>
-
-          <div className='service-card'>
-            <Link to="/products/monthly">
-              <img src={monthlyBoxImg} alt="Monthly Box" className="monthly" />
-            </Link>
-            <p className='price'>₹120</p>
-            <Link to="/products/monthly">
-              <button>Order Now</button>
-            </Link>
-          </div>
+          
         </div>
 
         <ul className='services'>

@@ -1,7 +1,7 @@
 .nav-container {
   background-color: #ffffff;
   color: black;
-  height: 12vh;
+  height: 16vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -17,30 +17,34 @@
 }
 
 .site-name img {
-  height: 81px;
+  height: 100px;
   width: 100px;
 }
 
 .site-name h1 {
   font-weight: bold;
-  font-size: 35px;
+  font-size: 40px;
   margin: 0;
+  color: black;
 }
 
 .list-items {
   list-style-type: none;
   display: flex;
-  gap: 12px;   
+  gap: 16px;   
   margin: 0;
   padding: 0;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .list-items li a {
   color: black;
   text-decoration: none;
-  font-size: 16px;  
+  font-size: 20px;  
   font-weight: bold;
   transition: color 0.3s ease;
+  
 }
 
 .list-items li a:hover {
@@ -81,6 +85,7 @@
 @media screen and (max-width: 480px) {
   .menu {
     display: flex;
+    padding-left: 80px;
   }
 
   .list-items {
@@ -97,6 +102,7 @@
     padding-top: 30px;
     gap: 20px;
   }
+  
 
   .list-items.show {
     display: flex;

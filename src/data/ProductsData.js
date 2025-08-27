@@ -3,22 +3,15 @@ import fullBoxImg from "../assets/fullbox.jpg";
 import comboBoxImg from "../assets/combobox.jpg";
 import monthlyBoxImg from "../assets/monthly.jpg";
 
-import weekendjuiceImg from '../assets/weekendjuice.jpeg'
-import weeklyjuiceImg from '../assets/weeklyjuice.jpeg'
-import monthlyjuiceImg from '../assets/monthlyjuice.jpg'
-
+import monthlyJuice from '../assets/monthlyjuice.jpg';
+import weeklyJuice from '../assets/weeklyjuice.jpeg'
 import appleImg from "../assets/apple.jpeg";
 import bananaImg from "../assets/banana.jpeg";
 import orangeImg from "../assets/orange.jpeg";
 import grapesImg from "../assets/grapes.jpeg";
 import mangoImg from "../assets/mango.jpeg";
 import papayaImg from "../assets/papaya.jpeg";
-import pomegranateImg from "../assets/pomegranate.jpeg";
-import kiwiImg from "../assets/kiwi.jpeg";
-import dragonFruitImg from "../assets/dragonfruit.jpeg";
-import strawberryImg from "../assets/straberry.jpeg";
-import pineappleImg from "../assets/pinneapple.jpeg";
-import watermelonImg from "../assets/watermeallon.jpeg";
+
 
 const productDetails = {
   mini: { 
@@ -44,7 +37,7 @@ const productDetails = {
       { name: "Orange", img: orangeImg },
       { name: "Mango", img: mangoImg },
       { name: "Papaya", img: papayaImg },
-      { name: "Pomegranate", img: pomegranateImg },
+      
     ]
   },
   combo: { 
@@ -53,14 +46,12 @@ const productDetails = {
     img: comboBoxImg, 
     description: "Special combo with discounts and mixed fruits.",
     fruits: [
-      { name: "Kiwi", img: kiwiImg },
-      { name: "Dragon Fruit", img: dragonFruitImg },
-      { name: "Strawberry", img: strawberryImg },
+      
       { name: "Mango", img: mangoImg },
       { name: "Grapes", img: grapesImg },
     ]
   },
-  monthlyBox: {   
+  monthly: {   
     name: "Monthly Box", 
     price: 120, 
     img: monthlyBoxImg, 
@@ -71,15 +62,14 @@ const productDetails = {
       { name: "Orange", img: orangeImg },
       { name: "Mango", img: mangoImg },
       { name: "Papaya", img: papayaImg },
-      { name: "Pineapple", img: pineappleImg },
-      { name: "Watermelon", img: watermelonImg },
+   
     ]
   },
 
   weeklyPlan: {
     name: "Weekly Plan",
-    img: weeklyjuiceImg,
-    description: "Fresh fruits delivered weekly",
+    img: weeklyJuice,
+    description: "Fresh fruit juice will be delivered on Saturday.",
     price: 450,
     fruits: [
       { name: "Apple", img: appleImg },
@@ -88,23 +78,15 @@ const productDetails = {
   },
   monthlyPlan: {
     name: "Monthly Plan",
-    img: monthlyjuiceImg,
-    description: "Best value for families",
+    img: monthlyJuice,
+    description: "Fresh fruit juice will be delivered on every Saturday.",
     price: 2000,
     fruits: [
       { name: "Orange", img: orangeImg },
       { name: "Grapes", img: grapesImg }
     ]
   },
-  weekendJuice: {
-    name: "Weekend Juice",
-    img: weekendjuiceImg,
-    description: "Special fruit juice every Saturday",
-    price: 150,
-    fruits: [
-      { name: "Mango Juice", img: mangoImg }
-    ]
-  }
+  
 };
 
-export default productDetails;
+export default productDetails;  
