@@ -1,118 +1,172 @@
+/* Base Styling */
+/* Navbar.css */
 .nav-container {
-  background-color: #ffffff;
-  color: black;
-  height: 16vh;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  position: relative;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
   z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 🔥 Shadow under header */
 }
 
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.2rem; /* 🔥 Reduced padding */
+}
+
+/* Logo and Brand */
 .site-name {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px; /* Smaller gap */
 }
 
 .site-name img {
-  height: 100px;
-  width: 100px;
+  width: 40px; /* 🔥 Smaller logo */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.site-name img:hover {
+  transform: scale(1.05);
 }
 
 .site-name h1 {
-  font-weight: bold;
-  font-size: 40px;
-  margin: 0;
-  color: black;
-}
-
-.list-items {
-  list-style-type: none;
-  display: flex;
-  gap: 16px;   
-  margin: 0;
-  padding: 0;
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.list-items li a {
-  color: black;
-  text-decoration: none;
-  font-size: 20px;  
-  font-weight: bold;
+  font-size: 1.3rem; /* 🔥 Slightly larger */
+  font-weight: 700; /* 🔥 Bolder logo text */
   transition: color 0.3s ease;
-  
 }
 
-.list-items li a:hover {
-  color: #ffcc00;
+.site-name h1:hover {
+  color: #f97316;
 }
 
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 1.5rem; /* 🔥 Reduced gap */
+}
+
+.nav-links ul {
+  display: flex;
+  gap: 1rem; /* 🔥 Reduced gap */
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none; /* 🔥 No underline */
+  font-size: 1rem; /* 🔥 Default size */
+  font-weight: 600; /* 🔥 Bolder menu items */
+  color: #333;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #f97316; /* 🔥 No underline */
+  transform: scale(1.05); /* 🔥 Subtle grow effect */
+}
+
+/* Hamburger Menu */
 .menu {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 5px;
-  color: black;
+  gap: 4px; /* 🔥 Smaller spacing */
+  transition: transform 0.3s ease;
+}
+
+.menu:hover {
+  transform: scale(1.1);
 }
 
 .menu span {
-  height: 3px;
-  width: 25px;
-  background-color: black;
-  display: block;
-  border-radius: 2px;
-}
-.cart-icon {
-  position: relative;
+  width: 22px; /* 🔥 Smaller lines */
+  height: 2.5px;
+  background: #333;
+  border-radius: 3px;
+  transition: all 0.3s ease;
 }
 
-.cart-count {
-  position: absolute;
-  top: -8px;
-  right: -10px;
-  background: #e74c3c;
-  color: white;
-  font-size: 12px;
-  font-weight: bold;
-  border-radius: 50%;
-  padding: 2px 6px;
-}
-
-@media screen and (max-width: 480px) {
-  .menu {
-    display: flex;
-    padding-left: 80px;
-  }
-
-  .list-items {
-    display: none;
-    flex-direction: column;
-    justify-content: end;
-    background-color: lightblue;
-    width: 50%;      
-    padding: 5px;
-    position: absolute;
-    top: 5vh;
-    right: 0;         
-    text-align: center;
-    padding-top: 30px;
-    gap: 20px;
-  }
-  
-
-  .list-items.show {
-    display: flex;
-  }
-
-  .list-items li {
-    padding: 8px 0;
+/* RESPONSIVE STYLING */
+@media (max-width: 768px) {
+  .site-name img {
+    width: 35px; /* 🔥 Smaller logo for tablets */
   }
 
   .site-name h1 {
-    font-size: 20px;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  .menu {
+    display: flex;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px; /* 🔥 Reduced height space */
+    right: 0;
+    background: #fff;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+    padding: 0.8rem; /* 🔥 Compact padding */
+    gap: 0.8rem;
+
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    gap: 0.6rem; /* 🔥 Reduced gap */
+  }
+
+  .nav-links a {
+    font-size: 0.95rem; /* 🔥 Smaller menu items for mobile */
+    font-weight: 500;   /* 🔥 Slightly lighter */
+  }
+
+  .nav-links a:hover {
+    color: #f97316;
+    transform: translateX(5px);
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .site-name img {
+    width: 30px; /* 🔥 Even smaller logo */
+  }
+
+  .site-name h1 {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .nav-inner {
+    padding: 0.4rem 0.8rem; /* 🔥 Compact padding */
+  }
+
+  .nav-links {
+    width: 100%;
+    top: 55px; /* 🔥 Smaller gap from top */
+  }
+
+  .nav-links a {
+    font-size: 0.9rem; /* 🔥 Even smaller menu items for XS devices */
+    font-weight: 500;
   }
 }
